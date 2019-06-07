@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		img {
+			width: 400px;
+			position: absolute;
+			margin-left: 40%;
+			margin-top: 15%
+		}
+	</style>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<img src="fry.png" alt="" style="display: none" class="robot">
+	<img src="notrobot.jpg" alt="" style="display: none" class="notrobot">
+
+
+	<div class="mx-auto col-4 father" style="margin-top: 300px">
+		<h1>Прежде чем пройти дальше. Докажите нам что вы не робот.</h1>
+		<h1 class="text-danger">Введите номер  85763</h1>
+		<input class="pole" size="30">
+		<button class="send ">отправить</button>	
+			
+	</div>
+	<div class="kebo" style="display: none">
+		<h1 class="mx-auto col-2">THAT'S</h1>
+		<img src="kebo.jpg">
+	</div>
+	<div class="a" style="display: none">
+		<img src="a.jpg">
+	</div>
+
+	<script>
+		let input = document.querySelector(".pole") 
+		let button = document.querySelector('.send')
+		let father = document.querySelector('.father')
+		let kebo = document.querySelector('.kebo')
+		let a = document.querySelector('.a')
+
+
+		button.onclick = function(){
+			if ( input.value == 85763 ) {
+				alert("that's robophobic!")
+				father.style.display = 'none'
+				kebo.style.display = 'block'
+			}
+			else{
+				alert("oh")
+				father.style.display = 'none'
+				a.style.display = 'block'
+			}
+		}
+	</script>
+</body>
+</html>
